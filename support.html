@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Support — Contacts Cleaners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--mint:#12C4A0;--mint-d:#0DAF8D;--ink:#0B1020;--slate:#5B6172;--bg:#F4F6FB;--white:#FFFFFF;--border:rgba(11,16,32,.08);--amber:#FFB020}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px;background:rgba(244,246,251,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:600;font-size:15px}
+.nav-logo-ring{width:28px;height:28px;border-radius:8px;background:var(--ink);display:flex;align-items:center;justify-content:center}
+.nav-logo-ring svg{width:18px;height:18px}
+.nav-back{font-size:14px;color:var(--mint);text-decoration:none;font-weight:500}
+.nav-back:hover{text-decoration:underline}
+main{max-width:680px;margin:0 auto;padding:100px 24px 80px}
+h1{font-size:32px;font-weight:600;letter-spacing:-.02em;margin-bottom:8px}
+.subtitle{font-size:18px;color:var(--slate);margin-bottom:48px}
+.contact-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:36px;margin-bottom:40px;text-align:center}
+.contact-card h2{font-size:20px;font-weight:600;margin-bottom:8px}
+.contact-card p{color:var(--slate);margin-bottom:24px;font-size:15px}
+.btn{display:inline-block;background:var(--ink);color:white;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;transition:background .2s}
+.btn:hover{background:#1a2040}
+.response-note{font-size:13px;color:var(--slate);margin-top:16px}
+h2.faq-title{font-size:22px;font-weight:600;margin-bottom:24px}
+.faq{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--white);margin-bottom:40px}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-size:15px;font-weight:500;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit}
+.faq-q:hover{background:rgba(11,16,32,.02)}
+.faq-arrow{font-size:18px;color:var(--slate);transition:transform .2s;flex-shrink:0;margin-left:16px}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+.faq-a{display:none;padding:0 24px 20px;font-size:15px;color:var(--slate);line-height:1.65}
+.faq-item.open .faq-a{display:block}
+footer{text-align:center;padding:40px 24px;border-top:1px solid var(--border);font-size:14px;color:var(--slate)}
+footer a{color:var(--mint);text-decoration:none;margin:0 12px}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">
+    <div class="nav-logo-ring">
+      <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="9" cy="9" r="7" stroke="#12C4A0" stroke-width="2" stroke-linecap="round" stroke-dasharray="30 14" stroke-dashoffset="8"/>
+        <circle cx="9" cy="9" r="3" fill="white"/>
+      </svg>
+    </div>
+    Contacts Cleaners
+  </a>
+  <a class="nav-back" href="/">← Back to home</a>
+</nav>
+
+<main>
+  <h1>Support</h1>
+  <p class="subtitle">We're here to help. Usually respond within 24 hours.</p>
+
+  <div class="contact-card">
+    <h2>Email support</h2>
+    <p>Have a question or found a bug? Send us an email and we'll get back to you.</p>
+    <a class="btn" href="mailto:support@contactscleaners.com">support@contactscleaners.com</a>
+    <p class="response-note">Typical response time: within 24 hours</p>
+  </div>
+
+  <h2 class="faq-title">Frequently asked questions</h2>
+  <div class="faq">
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        Is my contact data sent to the cloud?
+        <span class="faq-arrow">↓</span>
+      </button>
+      <div class="faq-a">No. Contacts Cleaners works entirely on your device. Your contacts never leave your iPhone through our app. There is no backend server and no account required.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        Can I undo a merge?
+        <span class="faq-arrow">↓</span>
+      </button>
+      <div class="faq-a">Yes. The app creates a local backup before every merge. You can undo any merge from the merge confirmation screen immediately after, or restore from backup in Settings.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        Why does the free version only allow 3 merges?
+        <span class="faq-arrow">↓</span>
+      </button>
+      <div class="faq-a">The free tier lets you scan all your contacts and see the full results — including your Contact Health Score, every duplicate group, and every incomplete contact. Three free merges let you try the process before deciding. Pro unlocks unlimited merges for a one-time $2.99.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        How do I restore my Pro purchase on a new device?
+        <span class="faq-arrow">↓</span>
+      </button>
+      <div class="faq-a">Tap Settings → Restore Purchases. As long as you're signed into the same Apple ID you used to purchase, Pro will be restored at no charge.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        The app found duplicates I don't want merged — is that safe?
+        <span class="faq-arrow">↓</span>
+      </button>
+      <div class="faq-a">Absolutely. You review every merge before it happens. The app shows you a side-by-side preview of what the merged contact will look like. You can skip any group you want to keep separate.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        Does Contacts Cleaners work with Google and Exchange contacts?
+        <span class="faq-arrow">↓</span>
+      </button>
+      <div class="faq-a">Yes. The app reads all contacts accessible through the iOS Contacts framework — including iCloud, Google, Exchange, and any other accounts you've added in iPhone Settings → Contacts → Accounts.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        How is the Contact Health Score calculated?
+        <span class="faq-arrow">↓</span>
+      </button>
+      <div class="faq-a">The score (0–100) reflects the overall cleanliness of your contact list. It factors in the number of duplicates detected, contacts missing names or phone numbers, and contacts with no information beyond a name. A score of 100 means a perfectly clean list.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        I have a feature request — where do I send it?
+        <span class="faq-arrow">↓</span>
+      </button>
+      <div class="faq-a">Email us at <a href="mailto:support@contactscleaners.com" style="color:var(--mint)">support@contactscleaners.com</a>. We read every message and feature requests genuinely influence what we build next.</div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Contacts Cleaners &nbsp;·&nbsp;
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Use</a>
+    <a href="/support.html">Support</a>
+  </p>
+</footer>
+
+<script>
+function toggle(btn){
+  const item=btn.closest('.faq-item');
+  item.classList.toggle('open');
+}
+</script>
+</body>
+</html>
