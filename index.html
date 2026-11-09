@@ -424,24 +424,6 @@ nav.scrolled{
 .price-cta:hover{background:#1a2140;transform:translateY(-2px)}
 .price-footer{margin-top:14px;font-size:13px;color:var(--mist)}
 
-/* ── TESTIMONIALS ── */
-.testimonials{padding:100px 24px;background:var(--bg)}
-.testi-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:16px;margin-top:52px;
-}
-.testi{
-  background:var(--white);
-  border-radius:var(--r);
-  padding:32px;
-  border:1px solid var(--border);
-  box-shadow:var(--shadow);
-}
-.stars{color:var(--amber);font-size:15px;letter-spacing:3px;margin-bottom:16px}
-.testi p{font-size:15px;line-height:1.7;color:var(--ink);margin-bottom:20px}
-.testi-author{font-size:13px;color:var(--mist)}
-
 /* ── CTA BANNER ── */
 .cta-banner{
   padding:100px 24px;
@@ -528,7 +510,7 @@ hr.div{border:none;border-top:1px solid var(--border);max-width:1080px;margin:0 
     </a>
     <a class="btn-secondary" href="#how">See how it works</a>
   </div>
-  <p class="hero-note">Free to scan &nbsp;·&nbsp; $2.99 one-time to clean &nbsp;·&nbsp; No subscription, ever</p>
+  <p class="hero-note">Free to scan &nbsp;·&nbsp; 3 free merges &nbsp;·&nbsp; $2.99 one-time for unlimited &nbsp;·&nbsp; No subscription, ever</p>
 </section>
 
 <!-- PROOF BAR -->
@@ -615,7 +597,7 @@ hr.div{border:none;border-top:1px solid var(--border);max-width:1080px;margin:0 
           </svg>
         </div>
         <h3>Scan everything</h3>
-        <p>Reads every contact from iCloud, Google, and work accounts. Finds duplicates using five matching methods — not just exact names. Groups three, four, or five copies together.</p>
+        <p>Reads every contact from iCloud, Google, and work accounts. Finds duplicates by matching a shared phone number or email address — never on a name alone — and keeps different people apart when their numbers or emails conflict. Groups three, four, or five copies together.</p>
         <div class="step-bar" style="background:var(--indigo)"></div>
       </div>
 
@@ -721,7 +703,7 @@ hr.div{border:none;border-top:1px solid var(--border);max-width:1080px;margin:0 
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4C5EF5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         </div>
         <h3>Smart duplicate detection</h3>
-        <p>Five tiers of matching: same name, same phone, same email, similar name, and name variants like "J. Smith" vs "John Smith."</p>
+        <p>Matches on a shared phone number or email only, never on a name alone. Contacts with conflicting numbers or emails are never merged, and numbers shared by many contacts (like an office line) never link anyone.</p>
         <span class="badge badge-free">Free</span>
       </div>
 
@@ -739,7 +721,7 @@ hr.div{border:none;border-top:1px solid var(--border);max-width:1080px;margin:0 
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#12C4A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
         </div>
         <h3>Automatic vCard backup</h3>
-        <p>Every merge is backed up to a vCard in your Files app before anything changes. Every action can be undone. You are always in control.</p>
+        <p>Every merge and delete is backed up as a vCard before anything changes. Find the backups in the Files app under On My iPhone → Contacts Cleaner. Changes can be undone right in the app. You are always in control.</p>
         <span class="badge badge-free">Free</span>
       </div>
 
@@ -757,8 +739,17 @@ hr.div{border:none;border-top:1px solid var(--border);max-width:1080px;margin:0 
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4C5EF5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
         </div>
         <h3>Delete junk contacts</h3>
-        <p>Delete nameless numbers and empty entries. Batch delete entire categories in one tap. Then watch your Health Score climb.</p>
+        <p>Delete nameless numbers and empty entries. Prefer to decide one by one? Swipe to Clean shows your contacts one at a time — keep or remove. Then watch your Health Score climb.</p>
         <span class="badge badge-pro">Pro</span>
+      </div>
+
+      <div class="feat">
+        <div class="feat-icon" style="background:var(--indigo-tint)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4C5EF5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+        </div>
+        <h3>Swipe to Clean</h3>
+        <p>Review contacts one at a time. Swipe right to keep, left to add to a To Delete pile. Nothing is deleted until you review the pile, and every contact is backed up first. Reviewing and keeping are free; deleting the pile is part of Pro.</p>
+        <span class="badge badge-free">Free to review</span>
       </div>
 
       <div class="feat">
@@ -783,43 +774,18 @@ hr.div{border:none;border-top:1px solid var(--border);max-width:1080px;margin:0 
       <div class="price-badge">Recommended</div>
       <p class="price-name">Pro Unlock</p>
       <div class="price-amount"><sup>$</sup>2.99</div>
-      <p class="price-sub">One-time purchase &nbsp;·&nbsp; No subscription</p>
+      <p class="price-sub">3 free merges &nbsp;·&nbsp; One-time purchase &nbsp;·&nbsp; No subscription</p>
       <ul class="price-list">
         <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Full scan &amp; Contact Health Score</li>
         <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Unlimited duplicate merging</li>
         <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Delete nameless &amp; junk contacts</li>
         <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Automatic backup &amp; undo on every action</li>
-        <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Connect iCloud, Google &amp; work accounts</li>
+        <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Works with the iCloud, Google and work accounts on your iPhone.</li>
         <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Auto-monitoring &amp; new duplicate alerts</li>
         <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Dark mode</li>
       </ul>
       <a class="price-cta" href="#">Download &amp; Unlock for $2.99</a>
       <p class="price-footer">Everything stays on your device. Nothing is uploaded anywhere.</p>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="section-inner">
-    <p class="eyebrow">Reviews</p>
-    <h2 class="section-title">People who've been there</h2>
-    <div class="testi-grid">
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        <p>"I had 340 contacts and half were duplicates from switching between Google and iCloud for years. Cleaned everything in five minutes. Worth every cent."</p>
-        <div class="testi-author">iPhone user · App Store</div>
-      </div>
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        <p>"The Health Score is genius. I opened it and immediately saw 94 duplicates. Watching the number drop as I merged felt genuinely satisfying."</p>
-        <div class="testi-author">iPhone user · App Store</div>
-      </div>
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        <p>"Finally an app that doesn't charge a subscription for something I need to do once. $2.99, fix your contacts, done. More apps should work like this."</p>
-        <div class="testi-author">iPhone user · App Store</div>
-      </div>
     </div>
   </div>
 </section>
